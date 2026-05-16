@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 216 38% 97%;
+  --foreground: 218 32% 12%;
+  --muted: 215 27% 92%;
+  --muted-foreground: 218 14% 43%;
+  --border: 214 24% 86%;
+  --input: 214 24% 86%;
+  --card: 0 0% 100%;
+  --card-foreground: 218 32% 12%;
+  --primary: 176 73% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 18% 92%;
+  --secondary-foreground: 218 32% 12%;
+  --accent: 39 94% 56%;
+  --accent-foreground: 218 32% 12%;
+  --destructive: 356 72% 52%;
+  --destructive-foreground: 0 0% 100%;
+  --success: 151 62% 41%;
+  --warning: 39 94% 50%;
+}
+
+[data-theme="dark"],
+.dark {
+  --background: 218 43% 7%;
+  --foreground: 210 35% 96%;
+  --muted: 218 26% 16%;
+  --muted-foreground: 214 18% 70%;
+  --border: 218 22% 22%;
+  --input: 218 22% 22%;
+  --card: 218 35% 10%;
+  --card-foreground: 210 35% 96%;
+  --primary: 176 73% 48%;
+  --primary-foreground: 218 43% 7%;
+  --secondary: 218 26% 17%;
+  --secondary-foreground: 210 35% 96%;
+  --accent: 38 93% 58%;
+  --accent-foreground: 218 43% 7%;
+  --destructive: 356 78% 60%;
+  --destructive-foreground: 0 0% 100%;
+}
+
+[data-dashboard-theme="glass"] {
+  --card: 210 40% 99%;
+  --border: 196 26% 80%;
+  --primary: 183 76% 38%;
+  --accent: 332 78% 60%;
+}
+
+[data-dashboard-theme="corporate"] {
+  --background: 215 38% 98%;
+  --card: 0 0% 100%;
+  --primary: 214 72% 43%;
+  --accent: 31 88% 54%;
+}
+
+[data-dashboard-theme="neon"] {
+  --background: 220 46% 6%;
+  --card: 220 38% 9%;
+  --primary: 164 88% 48%;
+  --accent: 320 90% 63%;
+  --border: 217 26% 25%;
+}
+
+[data-dashboard-theme="minimal"] {
+  --background: 210 20% 99%;
+  --card: 0 0% 100%;
+  --primary: 172 66% 32%;
+  --accent: 18 84% 57%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(45, 212, 191, 0.14), transparent 34rem),
+    radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.12), transparent 32rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.32);
+}
+
+.premium-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glass-panel {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+}
+
+.dark .glass-panel,
+[data-dashboard-theme="neon"] .glass-panel {
+  background: rgba(8, 17, 31, 0.72);
+}
+
+.chart-tooltip {
+  border-radius: 8px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+}
