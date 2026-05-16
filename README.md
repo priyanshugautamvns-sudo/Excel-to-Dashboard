@@ -26,6 +26,9 @@ ExcelInsight AI is a full-stack Next.js 15 application that converts Excel and C
 - Next API routes for `/api/analyze` and `/api/query`
 - IndexedDB for local dashboard storage
 
+## Click here for live Demo 
+excel-to-dashboard-pi.vercel.app
+
 ## Folder Structure
 
 ```text
@@ -125,7 +128,6 @@ npm run start
 ```
 
 Set Node version to `20.11.0` or newer.
-Click here for live Demo excel-to-dashboard-pi.vercel.app
 
 ## Small Upgrade For Better Results
 
